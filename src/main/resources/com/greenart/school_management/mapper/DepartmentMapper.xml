@@ -26,4 +26,15 @@
         set di_name=#{di_name}, di_graduate_score=#{di_graduate_score}, di_status=#{di_status}, di_mod_dt=NOW()
         where di_seq=#{di_seq}
     </update>
+    <select id="selectLatestDataSeq" resultType="java.lang.Integer">
+        select di_seq from department_info
+        order by di_seq desc limit 1
+    </select>
+    <insert id="insertDepartmentHistory">
+        insert into school_work_db.department_history(deph_type, deph_content, deph_di_seq)
+        values (#{deph_type}, #{deph_content}, #{deph_di_seq})
+    </insert>
+    <select id="getDepartmentByKeyword" resultType="com.greenart.school_management.data.DepartmentVO">
+        select di_seq, di_name, di_status from department_info where di_name like #{keyword}
+    </select>
 </mapper>

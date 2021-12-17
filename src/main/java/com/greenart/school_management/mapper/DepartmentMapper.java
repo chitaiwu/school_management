@@ -2,6 +2,7 @@ package com.greenart.school_management.mapper;
 
 import java.util.List;
 
+import com.greenart.school_management.data.DepartmentHistoryVO;
 import com.greenart.school_management.data.DepartmentVO;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -15,4 +16,9 @@ public interface DepartmentMapper {
     
     public DepartmentVO getDepartmentInfoBySeq(Integer seq);
     public void updateDepartment(DepartmentVO data);
+
+    public Integer selectLatestDataSeq();
+    public void insertDepartmentHistory(DepartmentHistoryVO data);
+
+    public List<DepartmentVO> getDepartmentByKeyword(String keyword);
 }
