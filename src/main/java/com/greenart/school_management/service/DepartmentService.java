@@ -109,6 +109,7 @@ public class DepartmentService {
 
         return resultMap;
     }
+    // 교직원 관리 쪽 => 학과 검색
     public Map<String, Object> getDepartmentByKeyword(String keyword) {
         Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
         if(keyword == null) keyword = "%%";

@@ -46,4 +46,12 @@ public class DashboardService {
 
         
     }
+    public Map<String, Object> getUpdateDate() {
+        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
+
+        resultMap.put("department", mapper.getDepartmentUpdateDate());
+        resultMap.put("teacher", mapper.getTeacherUpdateDate());
+
+        return resultMap;
+    }
 }

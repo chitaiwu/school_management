@@ -1,7 +1,7 @@
 package com.greenart.school_management.data;
 
 import lombok.Data;
-import java.sql.Date;
+import java.util.Date;
 
 @Data
 public class DepartmentVO {

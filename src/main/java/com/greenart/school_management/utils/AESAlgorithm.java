@@ -7,8 +7,8 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.tomcat.util.codec.binary.Base64;
 
 public class AESAlgorithm {
-    // private static final String key = "pwd!@#$";
-    private static final String key = "asdhlasjdf";
+    private static final String key = "pwd!@#$";
+    // private static final String key = "asdhlasjdf";
 
     public static String Decrypt(String text) throws Exception{
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");

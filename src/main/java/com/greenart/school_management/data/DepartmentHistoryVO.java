@@ -1,6 +1,6 @@
 package com.greenart.school_management.data;
 
-import java.sql.Date;
+import java.util.Date;
 
 import lombok.Data;
 
